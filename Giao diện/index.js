@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8080/api/todos';
+const API_URL = `${window.location.protocol}//${window.location.hostname}:8080/api/todos`;
 
 const taskInput = document.getElementById('task-text-input');
 const prioritySelect = document.getElementById('task-priority-select');
