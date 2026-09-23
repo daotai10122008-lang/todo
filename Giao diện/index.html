@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Quản lý công việc hàng ngày</title>
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">Daily planner</p>
+                <h1>Quản lý công việc</h1>
+            </div>
+            <div class="header-badge">
+                <span class="label">Hôm nay</span>
+                <strong id="current-date">23/09/2026</strong>
+            </div>
+        </header>
+
+        <main class="container">
+            <section class="card task-section">
+                <div class="section-header">
+                    <div>
+                        <p class="section-kicker">Công việc</p>
+                        <h2>Danh sách cần làm</h2>
+                    </div>
+                    <span class="status-pill">
+                        <span class="status-dot"></span>
+                        03 đang thực hiện
+                    </span>
+                </div>
+
+                <div class="task-input-group">
+                    <input type="text" id="task-text-input" placeholder="Thêm nhiệm vụ mới...">
+
+                    <select id="task-priority-select" aria-label="Chọn mức độ ưu tiên">
+                        <option value="Cao">Ưu tiên Cao</option>
+                        <option value="TrungBinh">Trung bình</option>
+                        <option value="Thap">Thấp</option>
+                    </select>
+
+                    <button type="button" id="add-task-btn">Thêm việc</button>
+                </div>
+
+                <fieldset class="filter-group" aria-label="Bộ lọc công việc">
+                    <legend class="visually-hidden">Bộ lọc công việc</legend>
+                    <span class="filter-label">Bộ lọc:</span>
+
+                    <label>
+                        <input type="checkbox" name="filter" value="all" checked> Tất cả
+                    </label>
+                    <label>
+                        <input type="checkbox" name="filter" value="high"> Cao
+                    </label>
+                    <label>
+                        <input type="checkbox" name="filter" value="Medium"> Trung bình
+                    </label>
+                    <label>
+                        <input type="checkbox" name="filter" value="Low"> Thấp
+                    </label>
+                </fieldset>
+
+                <ul class="task-list" id="task-container"></ul>
+            </section>
+
+            <aside class="card notes-section">
+                <div class="section-header">
+                    <div>
+                        <p class="section-kicker">Ghi chú</p>
+                        <h2>Ý tưởng nhanh</h2>
+                    </div>
+                </div>
+
+                <div class="notes-area">
+                    <textarea id="notes-input" placeholder="Nhập các ý tưởng đột xuất, số điện thoại hoặc lời nhắc nhanh..."></textarea>
+                    <button type="button" id="save-notes-btn" class="btn-block">Lưu ghi chú</button>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
